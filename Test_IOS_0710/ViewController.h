@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InsideViewController.h"
 
 bool didSelect;
 

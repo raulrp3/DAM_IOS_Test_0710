@@ -55,6 +55,14 @@
         [alert addAction:ok];
         
         [self presentViewController:alert animated:YES completion:nil];
+    }else{
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        InsideViewController *newViewController = (InsideViewController *) [storyBoard instantiateViewControllerWithIdentifier:@"insideViewController"];
+        
+        newViewController.userName = _tfUser.text;
+        
+        [self.navigationController pushViewController:newViewController animated:YES];
     }
 }
 @end
