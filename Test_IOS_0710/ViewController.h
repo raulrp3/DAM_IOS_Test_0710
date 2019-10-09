@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+bool didSelect;
+
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+@property (weak, nonatomic) IBOutlet UILabel *lbStudent;
+@property (weak, nonatomic) IBOutlet UITextField *tfUser;
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+
+- (IBAction)actionNext:(id)sender;
 
 
 @end
