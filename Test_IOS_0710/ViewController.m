@@ -47,6 +47,11 @@
 
 
 - (IBAction)actionNext:(id)sender {
+    
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     if ([_tfUser.text isEqual:@""] || [_tfPassword.text isEqual:@""]){
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ERROR" message:@"¡Los campos de usuario y contraseña son obligatorios!" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -56,13 +61,19 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }else{
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        /*UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         InsideViewController *newViewController = (InsideViewController *) [storyBoard instantiateViewControllerWithIdentifier:@"insideViewController"];
         
         newViewController.userName = _tfUser.text;
         
-        [self.navigationController pushViewController:newViewController animated:YES];
+        [self.navigationController pushViewController:newViewController animated:YES];*/
+        
+        InsideViewController *newViewController = (InsideViewController *)segue.destinationViewController;
+        
+        newViewController.userName = _tfUser.text;
     }
 }
+
+
 @end

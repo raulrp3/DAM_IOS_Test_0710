@@ -107,6 +107,7 @@
                                 <state key="normal" title="Ir a la siguiente vista"/>
                                 <connections>
                                     <action selector="actionNext:" destination="CQJ-DW-bZc" eventType="touchUpInside" id="yRu-OA-CTt"/>
+                                    <segue destination="K57-tc-13p" kind="show" id="pik-zz-b6H"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soy alumno de" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbY-QI-o3a">
@@ -135,7 +136,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="T26-Mc-en2"/>
                     <connections>
-                        <outlet property="btnNext" destination="ydV-TA-pjJ" id="zZD-Fr-AU1"/>
                         <outlet property="lbStudent" destination="dbY-QI-o3a" id="dBB-fi-ZRB"/>
                         <outlet property="tfPassword" destination="kMY-WO-2jz" id="fUJ-yq-8UW"/>
                         <outlet property="tfUser" destination="bTC-CE-aFO" id="kmq-wU-VKM"/>
@@ -187,7 +187,7 @@
             <objects>
                 <viewController id="GCK-rx-335" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mru-vw-yws">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvE-ua-Vsr">
