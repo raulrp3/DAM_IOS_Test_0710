@@ -45,11 +45,6 @@
     }
 }
 
-
-- (IBAction)actionNext:(id)sender {
-    
-}
-
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if ([_tfUser.text isEqual:@""] || [_tfPassword.text isEqual:@""]){
@@ -61,17 +56,10 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }else{
-        /*UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-        InsideViewController *newViewController = (InsideViewController *) [storyBoard instantiateViewControllerWithIdentifier:@"insideViewController"];
-        
-        newViewController.userName = _tfUser.text;
-        
-        [self.navigationController pushViewController:newViewController animated:YES];*/
-        
-        InsideViewController *newViewController = (InsideViewController *)segue.destinationViewController;
-        
-        newViewController.userName = _tfUser.text;
+        if ([segue.identifier isEqualToString:@"venue"]){
+            InsideViewController *newViewController = (InsideViewController *)segue.destinationViewController;
+            newViewController.userName = _tfUser.text;
+        }
     }
 }
 

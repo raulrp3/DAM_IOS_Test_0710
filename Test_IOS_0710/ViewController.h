@@ -18,8 +18,6 @@ bool didSelect;
 @property (weak, nonatomic) IBOutlet UITextField *tfUser;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
 
-- (IBAction)actionNext:(id)sender;
-
 
 @end
 
